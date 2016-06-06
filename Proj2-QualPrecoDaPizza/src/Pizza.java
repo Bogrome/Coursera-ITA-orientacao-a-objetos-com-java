@@ -4,9 +4,21 @@ import java.util.HashMap;
 public class Pizza {
 
     private int preco = 0;
-    private int quantidadeIngredientes = 0;
+    public int quantidadeIngredientes = 0;
+    private String apelido = null;
 
     static HashMap<String, Integer> ingredientes = new HashMap<String, Integer>();
+
+  
+      
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
 
     public void adicionaIngrediente(String ingrediente) {
 

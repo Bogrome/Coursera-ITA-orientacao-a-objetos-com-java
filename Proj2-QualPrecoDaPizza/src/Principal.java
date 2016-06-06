@@ -5,6 +5,7 @@ public class Principal {
 	Pizza nutellaComBanana = new Pizza();
 	nutellaComBanana.adicionaIngrediente("nutella");
 	nutellaComBanana.adicionaIngrediente("banana");
+	nutellaComBanana.setApelido("Nutella com banana"); 
 
 	Pizza marguerita = new Pizza();
 	marguerita.adicionaIngrediente("molho");
@@ -27,6 +28,7 @@ public class Principal {
 	frangoRequeijao.adicionaIngrediente("requeijao");
 
 	Pizza vazia = new Pizza();
+	vazia.setApelido("vazia");
 
 	CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 	carrinho.adicionaPizza(nutellaComBanana);
@@ -36,15 +38,12 @@ public class Principal {
 	carrinho.adicionaPizza(vazia);
 
 	/* Relatorio */
-	System.out.printf("Nutella com banana: R$ %.2f \n", (float) nutellaComBanana.getPreco());
-	System.out.printf("Marguerita: R$ %.2f \n", (float) marguerita.getPreco());
-	System.out.printf("Caipira: R$ %.2f \n", (float) caipira.getPreco());
-	System.out.printf("Frango requeijao: R$ %.2f \n", (float) frangoRequeijao.getPreco());
-	System.out.printf("Vazia: R$ %.2f \n", (float) vazia.getPreco());
-
+	carrinho.listaPizzas();
 	System.out.printf("\nValor da compra:\n\tR$ %.2f \n", (double) carrinho.valorTotal());
 
 	Pizza.imprimeIngredientesUtilizados();
+	
+	
 	
 
     }
