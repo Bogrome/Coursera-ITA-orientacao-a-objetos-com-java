@@ -8,8 +8,8 @@ public class Principal {
 		aluno.bimestre3 = 80;
 		aluno.bimestre4 = 70;
 
-		System.out.println(VerificadoraNotas.mediaAluno(aluno));
-		System.out.println(VerificadoraNotas.passouDeAno(aluno));
+		System.out.println(aluno.media());
+		System.out.println(aluno.passouDeAno());
 	}
 
 }
